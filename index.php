@@ -7,7 +7,7 @@ require_once('./config.php');
 $ACL = Array(
     //First value is homepage for current role
     'guest' => array('home', 'login', 'register'),
-    'user' => array('boarding', 'logout'),
+    'user' => array('boarding', 'booking', 'logout'),
     'mod' => array('boarding', 'logout'),
     'admin' => array('boarding', 'logout')
 );
