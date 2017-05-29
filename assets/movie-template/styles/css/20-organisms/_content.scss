@@ -1,0 +1,10 @@
+.content {
+  p{
+    z-index: 1;
+
+  }
+  @include screen('mobile') {
+    margin-top: 0;
+  }
+  margin-bottom: calculate-rem(100px);
+}

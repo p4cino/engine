@@ -1,0 +1,24 @@
+/* Menu po lewej */
+#pm_menu {
+  background: white;
+  color: #000000;
+  text-align: center
+}
+
+.menu-container {
+  width: 100%;
+  padding-top: calculate-rem(20px);
+  &__list, ul {
+    list-style: none;
+    padding: 0;
+    &__item, li {
+      text-align: left;
+      a {
+        color: #1e1e1e;
+        padding-left: calculate-rem(20px);
+        @include fontSize(18px);
+        font-weight: 100;
+      }
+    }
+  }
+}

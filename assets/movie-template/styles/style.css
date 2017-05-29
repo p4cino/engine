@@ -1,0 +1,207 @@
+/*
+Theme Name: Movie
+Theme URI:
+Author: Wojciech Puzio
+Author URI:
+Description: wojtexdesign@hotmail.com
+Version:
+License:
+License URI:
+Tags:
+*/
+@import url(https://fonts.googleapis.com/css?family=Lato:300,400);
+body {
+  background: white; }
+
+a:hover, a:active, a:visited {
+  text-decoration: none !important; }
+
+.normal h1, .normal h2, .normal h3 {
+  color: #191d1e !important; }
+.normal p {
+  color: #191d1e !important; }
+.normal footer {
+  background: #191d1e; }
+
+.inverse {
+  background: #191d1e; }
+  .inverse h1, .inverse h2, .inverse h3 {
+    color: white !important; }
+  .inverse p {
+    color: white !important; }
+  .inverse footer {
+    background: white; }
+
+/* Navbar */
+#menu-header {
+  height: 10vh; }
+
+.navbar {
+  -webkit-transition: all 0.9s ease-out;
+  -moz-transition: all 0.9s ease-out;
+  -o-transition: all 0.9s ease-out;
+  -ms-transition: all 0.9s ease-out;
+  transition: all 0.9s ease-out;
+  z-index: 999;
+  background: white !important; }
+  .navbar .navbar-brand {
+    color: #191d1e; }
+  .navbar.scrolled {
+    background: rgba(0, 0, 0, 0.5) !important; }
+    .navbar.scrolled a {
+      color: white !important; }
+    .navbar.scrolled .navbar-brand {
+      color: white; }
+
+.site-menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0; }
+.site-menu li {
+  float: left;
+  color: #191d1e; }
+.site-menu a {
+  display: block;
+  padding-top: 10px;
+  padding-right: 20px; }
+
+/* Menu po lewej */
+#pm_menu {
+  background: white;
+  color: #000000;
+  text-align: center; }
+
+.menu-container {
+  width: 100%;
+  padding-top: 1.25rem; }
+  .menu-container__list, .menu-container ul {
+    list-style: none;
+    padding: 0; }
+    .menu-container__list__item, .menu-container__list li, .menu-container ul__item, .menu-container ul li {
+      text-align: left; }
+      .menu-container__list__item a, .menu-container__list li a, .menu-container ul__item a, .menu-container ul li a {
+        color: #1e1e1e;
+        padding-left: 1.25rem;
+        font-size: 18px;
+        font-size: 1.125rem;
+        font-weight: 100; }
+
+#news {
+  height: 92vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../upload/slide/default.jpg") no-repeat fixed;
+  background-size: cover; }
+
+.video {
+  padding-left: 0rem;
+  padding-right: 0rem; }
+  .video__container {
+    position: relative;
+    bottom: 0%;
+    left: 0%;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    background: #000; }
+    .video__container video {
+      position: absolute;
+      z-index: 0;
+      bottom: 0; }
+    .video__container__description {
+      width: 18.75rem;
+      height: 100%;
+      position: absolute;
+      right: 0rem;
+      overflow: hidden; }
+      .video__container__description .box {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background: black;
+        background: -moz-linear-gradient(top, black 0%, rgba(255, 255, 255, 0) 100%);
+        background: -webkit-gradient(left top, left bottom, color-stop(0%, black), color-stop(100%, rgba(255, 255, 255, 0)));
+        background: -webkit-linear-gradient(top, black 0%, rgba(255, 255, 255, 0) 100%);
+        background: -o-linear-gradient(top, black 0%, rgba(255, 255, 255, 0) 100%);
+        background: -ms-linear-gradient(top, black 0%, rgba(255, 255, 255, 0) 100%);
+        background: linear-gradient(to bottom, black 0%, rgba(255, 255, 255, 0) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#000000', endColorstr='#ffffff', GradientType=0);
+        padding: 1.875rem 0;
+        font-family: 'Lato', sans-serif; }
+        .video__container__description .box h1 {
+          text-align: center;
+          padding-top: 5.625rem;
+          font-size: 30px;
+          font-size: 1.875rem;
+          font-weight: 300;
+          color: white !important; }
+        .video__container__description .box p {
+          padding-left: 0.3125rem;
+          padding-right: 0.3125rem;
+          font-size: 14px;
+          font-size: 0.875rem;
+          text-align: left;
+          color: white !important; }
+        .video__container__description .box__video-settings {
+          text-align: right;
+          padding-right: 1.25rem;
+          color: white; }
+
+.content {
+  margin-bottom: 6.25rem; }
+  .content p {
+    z-index: 1; }
+  @media only screen and (max-width: 767px) {
+    .content {
+      margin-top: 0; } }
+
+.flex-container {
+  height: 9.375rem;
+  margin-top: -1.25rem;
+  width: 100%; }
+
+.premiere-slide {
+  width: 100%; }
+  .premiere-slide .image {
+    height: 100px;
+    width: 180px;
+    padding: 5px;
+    transition: .3s;
+    transition-timing-function: ease-in-out;
+    margin-top: 30px; }
+    .premiere-slide .image:hover {
+      margin-top: 0px;
+      height: 11.875rem;
+      margin-top: -0.3125rem;
+      width: 18.75rem;
+      transition: .3s;
+      transition-delay: .4s;
+      transition-timing-function: ease-in-out; }
+
+.slick-list {
+  overflow-x: hidden; }
+
+.items {
+  z-index: 2; }
+
+.button-overlay {
+  z-index: 10;
+  position: absolute;
+  height: 95px;
+  width: 50px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  opacity: 0.9;
+  top: 35%;
+  cursor: pointer;
+  z-index: 13;
+  text-align: center;
+  display: none; }
+  .button-overlay .icon {
+    padding-top: 1.875rem; }
+
+.left {
+  left: 0; }
+
+.right {
+  right: 0; }
+
+/*# sourceMappingURL=style.css.map */
