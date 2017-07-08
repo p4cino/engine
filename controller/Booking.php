@@ -1,5 +1,7 @@
 <?php
-Class Booking extends DataBase {
+
+Class Booking extends DataBase
+{
     private $db;
     private $person;
     private $cinema;
@@ -9,37 +11,15 @@ Class Booking extends DataBase {
 
     /**
      * Booking constructor.
-     * @param $db
-     * @param $person
-     * @param $cinema
-     * @param $movie
-     * @param $data
-     * @param $hour
      */
-    public function __construct($db, $person, $cinema, $movie, $data, $hour)
+    public function __construct()
     {
         $this->db = DataBase::getDataBase();
-        $this->person = $person;
-        $this->cinema = $cinema;
-        $this->movie = $movie;
-        $this->data = $data;
-        $this->hour = $hour;
-    }
-
-    /**
-     * @return PDO
-     */
-    public function getDb(): PDO
-    {
-        return $this->db;
-    }
-
-    /**
-     * @param PDO $db
-     */
-    public function setDb(PDO $db)
-    {
-        $this->db = $db;
+//        $this->person = $person;
+//        $this->cinema = $cinema;
+//        $this->movie = $movie;
+//        $this->data = $data;
+//        $this->hour = $hour;
     }
 
     /**
@@ -122,13 +102,39 @@ Class Booking extends DataBase {
         $this->hour = $hour;
     }
 
-    public function checkReservation(){
+    public function getCinemaList()
+    {
+        $query = $this->db->prepare("SELECT * FROM cinema");
+        $query->execute();
+        $list = $query->fetchAll();
+        if ($query->rowCount() > 0) {
+            return $list;
+        } else {
+            return false;
+        }
+        $query->closeCursor();
+    }
+
+    public function getCinemaInformation($id)
+    {
+        $query = $this->db->prepare("SELECT * FROM cinema WHERE id = :var ");
+        $query->bindValue(":var", $id, PDO::PARAM_INT);
+        $query->execute();
+        $query->closeCursor();
+    }
+
+    public function checkReservation()
+    {
         //sprawdzanie statusów
     }
-    public function doReservation(){
+
+    public function doReservation()
+    {
         //dokonanie rezerwacji
     }
-    public function cancelReservation(){
+
+    public function cancelReservation()
+    {
         //anulowanie rezerwacji
     }
 

@@ -2,27 +2,7 @@
 #menu-header {
   height: 10vh;
 }
-.navbar {
-  -webkit-transition: all 0.9s ease-out;
-  -moz-transition: all 0.9s ease-out;
-  -o-transition: all 0.9s ease-out;
-  -ms-transition: all 0.9s ease-out;
-  transition: all 0.9s ease-out;
-  z-index: 999;
-  background: rgba($main-color, 1) !important;
-  .navbar-brand {
-    color: $second-color;
-  }
-  &.scrolled {
-    background: rgba(0, 0, 0, 0.5) !important;
-    a {
-      color: $main-color !important;
-    }
-    .navbar-brand {
-      color: $main-color;
-    }
-  }
-}
+
 .site-menu {
   ul {
     list-style-type: none;
@@ -37,5 +17,31 @@
     display: block;
     padding-top: 10px;
     padding-right: 20px;
+    color: $second-color !important;
+  }
+  a:hover {
+    color: $second-color !important;
+  }
+}
+
+.navbar {
+  -webkit-transition: all 0.9s ease-out;
+  -moz-transition: all 0.9s ease-out;
+  -o-transition: all 0.9s ease-out;
+  -ms-transition: all 0.9s ease-out;
+  transition: all 0.9s ease-out;
+  z-index: 999;
+  background: rgba($main-color, 1) !important;
+  .navbar-brand {
+    color: $second-color !important;
+  }
+  &.scrolled {
+    background: rgba(0, 0, 0, 0.5) !important;
+    a {
+      color: $main-color !important;
+    }
+    .navbar-brand {
+      color: $main-color;
+    }
   }
 }

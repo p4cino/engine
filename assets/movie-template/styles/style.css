@@ -31,27 +31,12 @@ a:hover, a:active, a:visited {
     color: white !important; }
   .inverse footer {
     background: white; }
+  .inverse label {
+    color: white !important; }
 
 /* Navbar */
 #menu-header {
   height: 10vh; }
-
-.navbar {
-  -webkit-transition: all 0.9s ease-out;
-  -moz-transition: all 0.9s ease-out;
-  -o-transition: all 0.9s ease-out;
-  -ms-transition: all 0.9s ease-out;
-  transition: all 0.9s ease-out;
-  z-index: 999;
-  background: white !important; }
-  .navbar .navbar-brand {
-    color: #191d1e; }
-  .navbar.scrolled {
-    background: rgba(0, 0, 0, 0.5) !important; }
-    .navbar.scrolled a {
-      color: white !important; }
-    .navbar.scrolled .navbar-brand {
-      color: white; }
 
 .site-menu ul {
   list-style-type: none;
@@ -63,7 +48,27 @@ a:hover, a:active, a:visited {
 .site-menu a {
   display: block;
   padding-top: 10px;
-  padding-right: 20px; }
+  padding-right: 20px;
+  color: #191d1e !important; }
+.site-menu a:hover {
+  color: #191d1e !important; }
+
+.navbar {
+  -webkit-transition: all 0.9s ease-out;
+  -moz-transition: all 0.9s ease-out;
+  -o-transition: all 0.9s ease-out;
+  -ms-transition: all 0.9s ease-out;
+  transition: all 0.9s ease-out;
+  z-index: 999;
+  background: white !important; }
+  .navbar .navbar-brand {
+    color: #191d1e !important; }
+  .navbar.scrolled {
+    background: rgba(0, 0, 0, 0.5) !important; }
+    .navbar.scrolled a {
+      color: white !important; }
+    .navbar.scrolled .navbar-brand {
+      color: white; }
 
 /* Menu po lewej */
 #pm_menu {
@@ -203,5 +208,23 @@ a:hover, a:active, a:visited {
 
 .right {
   right: 0; }
+
+.cover {
+  color: white; }
+  .cover--register {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/register.jpg);
+    background-size: cover;
+    height: 40vh; }
+    .cover--register h1 {
+      color: white !important;
+      padding-top: 10vh; }
+  .cover--login {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/login.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 40vh; }
+    .cover--login h1 {
+      color: white !important;
+      padding-top: 10vh; }
 
 /*# sourceMappingURL=style.css.map */

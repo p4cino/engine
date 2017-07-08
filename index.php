@@ -6,7 +6,7 @@ require_once('./config.php');
 //Initialize Access Control Lists
 $ACL = Array(
     //First value is homepage for current role
-    'guest' => array('home', 'login', 'register'),
+    'guest' => array('home', 'login', 'register', 'join'),
     'user' => array('boarding', 'booking', 'logout'),
     'mod' => array('boarding', 'logout'),
     'admin' => array('boarding', 'logout')
