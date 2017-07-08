@@ -7,12 +7,10 @@ require_once('./config.php');
 $ACL = Array(
     //First value is homepage for current role
     'guest' => array('home', 'login', 'register', 'join'),
-    'user' => array('boarding', 'booking', 'logout'),
+    'user' => array('boarding', 'booking', 'cinema', 'movie', 'logout'),
     'mod' => array('boarding', 'logout'),
     'admin' => array('boarding', 'logout')
 );
-//test branch
-
 
 //Initialize person class
 $Person = new Person($_SESSION['person']);
@@ -20,7 +18,6 @@ $Person = new Person($_SESSION['person']);
 $Page = new KillSwitch($Person->getRole(), $ACL, $_GET['page']);
 //Render page
 $Page->renderPage();
-
 
 
 ob_end_flush();

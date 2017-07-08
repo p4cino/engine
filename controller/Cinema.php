@@ -12,7 +12,22 @@ Class Cinema extends DataBase {
      */
     public function __construct($id)
     {
-        $this->id = $id;
+        if (isset($id) && is_numeric($id)) {
+            $this->db = DataBase::getDataBase();
+
+            $zap = $this->db->prepare("SELECT * FROM cinema WHERE id = :id");
+            $zap->bindValue(":id", $id, PDO::PARAM_INT);
+            $zap->execute();
+            $tab = $zap->fetch(PDO::FETCH_ASSOC);
+            $zap->closeCursor();
+
+            $this->id = $id;
+            $this->email = $tab['email'];
+            $this->password = $tab['password'];
+            $this->name = $tab['name'];
+            $this->surname = $tab['surname'];
+            $this->role = $tab['role'];
+        }
     }
 
     /**
@@ -77,6 +92,18 @@ Class Cinema extends DataBase {
     public function setDescription($description)
     {
         $this->description = $description;
+    }
+
+    public function getFilmList($limit, $sort) {
+//        $query = $this->db->prepare("SELECT * FROM movie WHERE movie.id = ");
+//        $query->execute();
+//        $list = $query->fetchAll();
+//        if ($query->rowCount() > 0) {
+//            return $list;
+//        } else {
+//            return false;
+//        }
+//        $query->closeCursor();
     }
 
 }
